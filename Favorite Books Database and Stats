@@ -1,0 +1,28 @@
+--Create a favorite books database
+
+CREATE TABLE books (id INTEGER PRIMARY KEY, name TEXT, rating INTEGER);
+
+INSERT INTO books VALUES (1,"Golden Sun",4);
+INSERT INTO books VALUES (2, "Gods of Egypt",3);
+INSERT INTO books VALUES (3, "To the Moon",2);
+INSERT INTO books VALUES (4, "Harry Potter & The Goblet of Fire", 7);
+INSERT INTO books VALUES (5, "Speak", 6);
+INSERT INTO books VALUES (6, "Lord of the Flies", 5);
+INSERT INTO books VALUES (7, "Dorothy Must Die", 1);
+INSERT INTO books VALUES (8, "Miracles from Heaven",8);
+INSERT INTO books VALUES (9, "Good Grief",10);
+INSERT INTO books VALUES (10, "The 48 Laws of Power", 9);
+
+
+--display the databse ordered by rating.
+SELECT *
+FROM books
+ORDER BY rating desc;
+
+
+--what are the 5 most popular books?
+
+SELECT *
+FROM books
+ORDER BY popularity desc
+limit 5;
