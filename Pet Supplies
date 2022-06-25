@@ -1,0 +1,30 @@
+--Create a table based on a store, containing 15 items and 4 columns
+Selected a pet store, as I have a dog & love all types of animals.
+
+CREATE TABLE pet_supplies (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, aisle INTEGER, price INTEGER);
+INSERT INTO pet_supplies VALUES(1,"Dog Toys",50,5,10);
+INSERT INTO pet_supplies VALUES(2, "Cat Toys",20,4,15);
+INSERT INTO pet_supplies VALUES(3, "Live Crickets",200,12,5);
+INSERT INTO pet_supplies VALUES(4, "Dog Food",25,3,30);
+INSERT INTO pet_supplies VALUES(5, "Cat Food",25,2,20);
+INSERT INTO pet_supplies VALUES(6, "Bird Food", 12,1,25);
+INSERT INTO pet_supplies VALUES(7, "Fish Supplies",15,9,15);
+INSERT INTO pet_supplies VALUES(8, "Grooming Supplies",45,7,45);
+INSERT INTO pet_supplies VALUES(9, "Treats",100,6,20);
+INSERT INTO pet_supplies VALUES(10, "Harnesses", 70,8,12);
+INSERT INTO pet_supplies VALUES(11, "Crates",40,10,60);
+INSERT INTO pet_supplies VALUES(12, "Dental Care", 50,11,40);
+INSERT INTO pet_supplies VALUES(13, "Reptile Accessories", 150, 13,20);
+INSERT INTO pet_supplies VALUES(14, "Cat Supplies",75,14,20);
+INSERT INTO pet_supplies VALUES(15, "Health",200,15,50);
+
+Query the pet_supplies table to order the table based on price
+
+SELECT * 
+FROM pet_supplies
+ORDER BY price;
+
+Aggregate the pet_supplies table to show the number of items in the store (1,077 items)
+
+SELECT SUM(quantity)
+FROM pet_supplies
