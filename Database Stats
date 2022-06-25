@@ -1,0 +1,14 @@
+--Creating another value in the TODO List table that will be completed
+
+CREATE TABLE todo_list (id INTEGER PRIMARY KEY, item TEXT, minutes INTEGER);
+INSERT INTO todo_list VALUES (1, "Wash the dishes", 15);
+INSERT INTO todo_list VALUES (2, "vacuuming", 20);
+INSERT INTO todo_list VALUES (3, "Learn some stuff on KA", 30);
+
+-Inserted Laundry into the database todo_list that takes 60 minutes (Wash & Dry)
+INSERT INTO todo_list VALUES (4,"Laundry", 60);
+
+-Aggregated the data to summarize the amount of minutes all of the tasks will take to complete
+
+SELECT SUM (minutes)
+FROM todo_list;
